@@ -1,0 +1,23 @@
+import feat
+# Raw data
+# Date,Open,High,Low,Close,Adj Close,Volume
+Date
+S_Open
+S_High
+S_Low
+S_Close
+S_AdjClose
+S_Volume
+
+Open                                float(S_Open)
+Close                               float(S_Close)
+High                                float(S_High)
+Low                                 float(S_Low)
+
+Atr                                 feat.atr(High, Low, Close)
+Volume                              int(S_Volume)
+PivotPoint                          (High + Close + Low)/3
+PivotPointS1                        (PivotPoint * 2) - High
+PivotPointS2                        PivotPoint - High + Low
+PivotPointR1                        (PivotPoint * 2) - Low
+PivotPointR2                        PivotPoint + High - Low
