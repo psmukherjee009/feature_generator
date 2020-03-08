@@ -36,6 +36,7 @@ def get_parser_code(schema_file, parser_file_needed):
     code = "\n".join(parsed_lines)
     code += """
 
+
 def computed_features():
     return ",".join([%s])
 """ % ",".join(["str(%s)" % f for f in features])
@@ -50,6 +51,7 @@ def computed_features():
             fh.write(code)
 
     return code
+
 
 def parse_input():
     DESC = """
